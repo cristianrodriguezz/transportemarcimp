@@ -1,0 +1,27 @@
+---
+import { ViewTransitions } from 'astro:transitions';
+
+const { data } = Astro.props;
+---
+
+	<li class="link-card list-none bg-bunker-800 backdrop-blur-sm rounded-2xl text-text-50"  transition:name={`box ${data?.id} image`}>
+		<a href={`/services/${data?.id}`} class="flex flex-col gap-1">
+			<div class="h-44">
+				<img src={data?.img}  alt="carga seca" class="w-full h-full object-cover rounded-t-2xl" transition:name={`service ${data?.id} image`}>
+			</div>
+			<h2 class="p-3 font-bold text-xl"   transition:name={`title ${data?.id} image`}>
+				{data?.title}
+				<span>&rarr;</span>
+			</h2>
+			<p class="p-3"  transition:name={`body ${data?.id} image`}>
+				{data?.body}
+			</p>
+		</a>
+	</li>
+
+	<ViewTransitions/>
+	
+
+<style>
+
+</style>

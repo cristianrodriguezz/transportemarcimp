@@ -1,0 +1,26 @@
+---
+import CardFeatures from "./CardFeatures.astro";
+import dolly from '../assets/dolly.svg'
+import timer from '../assets/timer.svg'
+import pack from '../assets/package.svg'
+import map from '../assets/map.svg'
+import truck from '../assets/truck.svg'
+
+
+---
+<section id="features" class="grid grid-cols-2 grid-rows-1 gap-16 pt-24 pr-3 pl-3 lg:px-20 xl:px-96 bg-bunker-900 text-text-50 ">
+  <div class="flex flex-col justify-start items-start gap-6">
+    <h2 class="font-bold text-2xl">Lorem ipsum dolor sit amet consectetur, adipisicing elit. </h2>
+    <p class="font text-sm font-medium">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed omnis rem quod repellendus consequatur pariatur harum eaque dolores dignissimos laboriosam, recusandae neque nam voluptas facere adipisci placeat ipsum delectus voluptatibus!
+    </p>
+    <button class="rounded-full bg-bunker-950 px-3 py-2">Lorem ipsum adfggh</button>
+  </div>
+  <div class="flex flex-col gap-9">
+    <CardFeatures src={dolly} alt="dolly" body="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum ipc deserunt"/>
+    <CardFeatures src={timer} alt="timer" body="Lorem ipsum dolor sit amet consectetur, adipisicing c deserunt"/>
+    <CardFeatures src={pack} alt="pack" body="Lorem ipsum dolor sit nt"/>
+    <CardFeatures src={map} alt="map" body="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum ipc deserunt"/>
+    <CardFeatures src={truck} alt="truck" body="Lorem ipsum dolor sit amet serunt"/>
+  </div>
+<section/>

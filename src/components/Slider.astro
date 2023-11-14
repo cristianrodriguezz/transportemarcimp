@@ -1,0 +1,53 @@
+---
+import { Image } from 'astro:assets';
+import camion from '../assets/camion.png'
+
+
+
+
+---
+<div class=" pr-3 pl-3 lg:px-20 xl:px-96 pt-44 overflow-hidden ">
+  <h1 class="text-text-50 text-7xl font-bold animate-flip-up animate-once  ">Transporte <span class="text-blue-500">internacional</span> de cargas.</h1>
+  <div class="h-auto">
+    <div class="flex items-end justify-end animate-flip-up animate-once ">
+      <p class="w-40 text-text-50  text-sm relative bottom-10 ">Somos una empresa chilena con más de 30 años de experiencia en Transporte y Logística Internacional de Cargas, especializada en envíos entre Chile y Argentina.</p>
+    </div>
+    <Image alt='camion' src={camion} class="animate relative bottom-20"/>
+  </div>
+</div>
+<script>
+  const animateElements = document.querySelectorAll('.animate')
+
+  const isVisible = (entries) => {
+    entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('animateOberver')
+    } else {
+      entry.target.classList.remove('animateOberver')
+    }
+    })
+  }
+
+let observer = new IntersectionObserver(isVisible,{})
+
+animateElements.forEach(element => {
+  observer.observe(element);
+});
+
+
+</script>
+<style>
+  @keyframes desplazar {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+  .animateOberver{
+    animation: desplazar 1s cubic-bezier( 0.26, 0.27, 0, 1 );
+  }
+
+
+</style>
