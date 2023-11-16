@@ -1,5 +1,6 @@
 ---
 import { ViewTransitions } from 'astro:transitions';
+import '@fontsource-variable/inter';
 import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
 
@@ -28,18 +29,11 @@ const { title } = Astro.props;
 	</body>
 </html>
 <style is:global>
-	html {
-		font-family: system-ui, sans-serif;
+	html{
+		scroll-behavior: smooth ;
 	}
-	code {
-		font-family:
-			Menlo,
-			Monaco,
-			Lucida Console,
-			Liberation Mono,
-			DejaVu Sans Mono,
-			Bitstream Vera Sans Mono,
-			Courier New,
-			monospace;
+	body{
+		font-family: 'Inter Variable', sans-serif;
+
 	}
 </style>

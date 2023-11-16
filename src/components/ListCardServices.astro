@@ -3,8 +3,9 @@ import CardService from "./CardService.astro";
 import {dataService} from '../lib/dataservice.js'
 
 ---
-<section class="grid grid-cols-3 grid-rows-1 gap-14 items-center justify-center px-3 lg:px-20 xl:px-96 pt-44 overflow-hidden ">
-
+<section  class="grid grid-cols-3 grid-rows-1 gap-14 items-center justify-center px-3 lg:px-20 xl:px-96 pt-44 overflow-hidden ">
+  
   {dataService.map( data => <CardService data={data}/> )}
 
 </section>
+

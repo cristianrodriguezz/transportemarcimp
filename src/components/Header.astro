@@ -1,19 +1,23 @@
 ---
-import { Image } from "astro:assets";
-import logo from '../assets/logomarcimp.svg'
+import Logo from "./Logo.astro";
 ---
 
-<header class="text-white flex justify-between items-center fixed z-10 w-screen bg-bunker-50 backdrop-blur border-b px-3 py-3 lg:px-20 xl:px-96">
+<header class="text-text-100 font-bold text-xl flex justify-between items-center fixed shado z-10 w-screen bg-bunker-50 backdrop-blur border-b px-3 py-3 lg:px-20 xl:px-96">
   <div class="w-[250px]">
-    <Image src={logo} alt="logo marcimp"/>
+    <a href="/">
+      <Logo/>
+    </a>
+    
   </div>
-  <nav class="flex list-none gap-5">
-    <li><a href="/#question">Nosotros</a></li>
-    <li><a href="/#service">Servicio</a></li>
-    <li><a href="/#features">Clientes</a></li>
-    <li><a href="/#">Contacto</a></li>
+  <nav class="flex list-none gap-10">
+    <li class="hover:text-blue-500"><a href="/#question">Nosotros</a></li>
+    <li class="hover:text-blue-500"><a href="/#service">Servicio</a></li>
+    <li class="hover:text-blue-500"><a href="/#features">Clientes</a></li>
+    <li class="hover:text-blue-500"><a href="/#">Contacto</a></li>
   </nav>
+  
 </header>
+
 <style>
 
 </style>

@@ -1,4 +1,6 @@
 /** @type {import('tailwindcss').Config} */
+const defaultTheme = require("tailwindcss/defaultTheme");
+
 export default {
 	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
 	theme: {
@@ -14,14 +16,18 @@ export default {
 						'600': '#515f78',
 						'700': '#434d61',
 						'800': '#3a4252',
-						'900': '#1f2531',
-						'950': '#13151a',
+						'900': '#1e206f',
+						'950': '#ffffff',
 				},
 					'text': {
-						'50': '#fff'
+						'50': '#fff',
+						'100': '#00000f'
 					}
-			}
+			},
+		
+
 		},
+
 	},
 	plugins: [
 		require('tailwindcss-animated'), require("daisyui")
