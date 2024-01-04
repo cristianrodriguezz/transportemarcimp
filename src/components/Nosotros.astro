@@ -1,0 +1,35 @@
+---
+import Montain from "../icons/Montain.astro";
+---
+<section id="nosotros" class="flex flex-col gap-20 justify-center items-center text-center text-text-100 relative bg-bunker-800 py-48 lg:px-32 2xl:px-96">
+  <Montain/>
+  <div class="relative">
+    <h2 class="text-center font-extrabold text-5xl text-bunker-900 relative">NOSOTROS</h2>
+    <svg id="circle" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 150 80" shape-rendering="geometricPrecision"  text-rendering="geometricPrecision"><path d="M108.8494,121.123553c-5.729294,4.456521-28.187078,20.474637-20.393735,36.97016s28.414069,14.784552,47.424341,13.886373s30.456698-18.564211,45.790381-24.059051s7.681869-11.59956-3.10074-22.850587-28.188713-10.234115-42.689641-10.023968-21.301312,1.620552-27.030606,6.077073Z" transform="matrix(1.423007 0 0 1.117975-122.896488-117.36881)" fill="currentColor"  stroke-width="0"/></svg>
+  </div>
+  <p class="text-xl font-medium">
+    Somos una empresa chilena, con una trayectoria de más de 30 años
+     en el sector, enfocada en las operaciones de Transporte y Logística Internacional de Cargas, especializada en los envíos entre Chile y Argentina.
+  </p>
+  <a class="p-5 bg-bunker-900 rounded-full text-text-50" href="/#nosotros">Ver más</a>
+</section>
+<style>
+  h2{
+    z-index: 1;
+  }
+  section{
+    z-index: 1;
+  }
+#circle{
+  width: 250px;
+  position: absolute;
+  left: 13px;
+  top: -50px;
+  z-index: 0;
+  color: rgba(103, 78, 243, 0.822)}
+#montaña{ 
+  position: absolute;
+  z-index: -1;
+  color: rgba(13, 23, 167, 0.075);
+}
+</style>

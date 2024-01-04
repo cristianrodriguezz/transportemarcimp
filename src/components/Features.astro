@@ -5,35 +5,65 @@ import timer from '../assets/timer.svg'
 import pack from '../assets/package.svg'
 import map from '../assets/map.svg'
 import truck from '../assets/truck.svg'
+import casco from '../assets/casco.svg'
+import Pack from '../icons/Pack.astro'
 
+const FEATURES = [
+  { src: truck, body: 'Flota propia con camiones, semirremolques y laterales (siders).' },
+  { src: map, body: 'Rastreo y monitoreo especializado para todas nuestras unidades.' },
+  { src: dolly, body: 'Líderes en coordinación y seguimiento de cargas para entregas exitosas.' },
+  { src: pack, body: 'Facilitamos transporte de cargas internacionales con soluciones logísticas integrales.' },
+  { src: pack, body: 'Servicios de custodia durante el tránsito para proteger sus envíos.' },
+  { src: casco, body: 'Conductores altamente capacitados para traslados seguros y eficientes de mercadería.' },
+]
 
 ---
 
 
 
-<svg id="eTSB96hv7yE1" xmlns="http://www.w3.org/2000/svg" style="transform: translateY(2px) " xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1440 100" shape-rendering="geometricPrecision" text-rendering="geometricPrecision"><defs><linearGradient id="eTSB96hv7yE2-fill" x1="0" y1="1" x2="0" y2="0" spreadMethod="pad" gradientUnits="objectBoundingBox" gradientTransform="translate(0 0)"><stop id="eTSB96hv7yE2-fill-0" offset="0%" stop-color="#1e206f"/><stop id="eTSB96hv7yE2-fill-1" offset="100%" stop-color="#504de2"/></linearGradient></defs><path d="M859.397016,49.440108C921.12442,54.676008,930.689336,53.3,1005.344668,40s96.580136,15.3,116.580136,15c20,.3,58.075196-22,78.075196-26.7c20-5.3,46.389247-8,66.389247,1.7c20,10.3,33.610753,9.7,53.610753,6.7s40-3.7,60-11.7s40-2,50,1.7l10,3.3v70h-10c-10,0-30,0-50,0s-40,0-60,0-40,0-60,0-40,0-60,0-40,0-60,0-40,0-60,0-40,0-60,0-40,0-60,0-40,0-60,0-40,0-60,0-40,0-60,0-40,0-60,0-40,0-60,0-40,0-60,0-40,0-60,0-40,0-60,0-40,0-60,0-40,0-60,0-40,0-60,0-40,0-60,0-40,0-60,0-40,0-60,0-40,0-60,0-40,0-50,0h-10v-80l10,1.7c10,1.3,30,5.3,50,5C80,27,100,23,120,20s40-7,60-6.7c20-.3,40,3.7,60,8.4C260,27,280,33,300,40s50.586722,20,71.302734,15s86.886562-52.894118,209.251209-28.3s217.115669,17.504208,278.843073,22.740108Z" transform="translate(0-1.294118)" fill="url(#eTSB96hv7yE2-fill)" stroke="#212376"/></svg>
-<div>
-  <section id="features" class="grid grid-cols-2 grid-rows-1 justify-center items-center gap-16 pt-18 pr-3 pl-3 lg:px-20 2xl:px-96 bg-bunker-900 text-text-50 ">
+
+  <section data-section="features" class="grid grid-cols-2 grid-rows-1 justify-center items-center gap-16 py-16 pt-18 pr-3 pl-3 lg:px-32 2xl:px-96 bg-bunker-900 text-text-50 ">
     
-    <div class="flex flex-col justify-start items-start gap-6">
+    <div class="flex flex-col justify-start items-start gap-6 relative z-10">
       
-      <h2 class="font-bold text-2xl">Lorem ipsum dolor sit amet consectetur, adipisicing elit. </h2>
-      <p class="font text-sm font-medium">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed omnis rem quod repellendus consequatur pariatur harum eaque dolores dignissimos laboriosam, recusandae neque nam voluptas facere adipisci placeat ipsum delectus voluptatibus!
+      <h2 class="font-bold text-4xl text-slate-300">Nuestra flota</h2>
+      <p class="font font-medium text-pretty text-base text-gray-200 leading-relaxed">
+        Disponemos de una flota compuesta por unidades tractoras última tecnología, 
+        furgones térmicos con equipo de frío Thermoking, portacontenedores con Genset y 
+        semirremolques con barandas volcables. A su vez contamos con socios estratégicos 
+        con unidades propias que operan con dedicación exclusiva, cumpliendo con los estándares
+         de calidad de nuestra compañía.
       </p>
       <button class="rounded-full bg-bunker-950 text-text-100 text-semibold px-3 py-2">Lorem ipsum adfggh</button>
     </div>
     <div class="flex flex-col gap-9">
-      <CardFeatures src={dolly} alt="dolly" body="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum ipc deserunt"/>
-      <CardFeatures src={timer} alt="timer" body="Lorem ipsum dolor sit amet consectetur, adipisicing c deserunt"/>
-      <CardFeatures src={pack} alt="pack" body="Lorem ipsum dolor sit nt"/>
-      <CardFeatures src={map} alt="map" body="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum ipc deserunt"/>
-      <CardFeatures src={truck} alt="truck" body="Lorem ipsum dolor sit amet serunt"/>
+      <img src="../assets/package.svg" alt="">
+      {
+        FEATURES.map(({src, body}) => <CardFeatures src={src} alt="icon" body={body}/>)
+      }
+
     </div>
     <section/>
-</div>
-<svg id="eTSB96hv7yE1" xmlns="http://www.w3.org/2000/svg" style="transform: translateY(-10px) rotate(180deg) " xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1440 100" shape-rendering="geometricPrecision" text-rendering="geometricPrecision"><defs><linearGradient id="eTSB96hv7yE2-fill" x1="0" y1="1" x2="0" y2="0" spreadMethod="pad" gradientUnits="objectBoundingBox" gradientTransform="translate(0 0)"><stop id="eTSB96hv7yE2-fill-0" offset="0%" stop-color="#1e206f"/><stop id="eTSB96hv7yE2-fill-1" offset="100%" stop-color="#504de2"/></linearGradient></defs><path d="M859.397016,49.440108C921.12442,54.676008,930.689336,53.3,1005.344668,40s96.580136,15.3,116.580136,15c20,.3,58.075196-22,78.075196-26.7c20-5.3,46.389247-8,66.389247,1.7c20,10.3,33.610753,9.7,53.610753,6.7s40-3.7,60-11.7s40-2,50,1.7l10,3.3v70h-10c-10,0-30,0-50,0s-40,0-60,0-40,0-60,0-40,0-60,0-40,0-60,0-40,0-60,0-40,0-60,0-40,0-60,0-40,0-60,0-40,0-60,0-40,0-60,0-40,0-60,0-40,0-60,0-40,0-60,0-40,0-60,0-40,0-60,0-40,0-60,0-40,0-60,0-40,0-60,0-40,0-60,0-40,0-60,0-40,0-60,0-40,0-60,0-40,0-50,0h-10v-80l10,1.7c10,1.3,30,5.3,50,5C80,27,100,23,120,20s40-7,60-6.7c20-.3,40,3.7,60,8.4C260,27,280,33,300,40s50.586722,20,71.302734,15s86.886562-52.894118,209.251209-28.3s217.115669,17.504208,278.843073,22.740108Z" transform="translate(0-1.294118)" fill="url(#eTSB96hv7yE2-fill)" stroke="#212376"/></svg>
 
+
+
+<style>
+  @keyframes scale {
+
+    100%{
+      transform: scale(1.1,0.9)
+    }
+  }
+  .package{
+    width: 200px;
+    position: absolute;
+    top: 0px;
+    left: 10%;
+    z-index: 8;
+    animation: scale 2s linear infinite alternate;
+  }
+
+</style>
   
 
 

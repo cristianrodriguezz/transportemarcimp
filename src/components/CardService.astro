@@ -23,10 +23,10 @@ const { data } = Astro.props;
 			<img src={data?.img}  alt="carga seca" class="w-full h-full object-cover rounded-2xl hover:cursor-pointer" transition:name={`service ${data?.id} image`}>
 		</a>
 	</li> -->
-	<section class="py-10" transition:name={`box ${data?.id} image`}>
-			<div class="relative flex w-80 flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md">
+	<section  class="py-10" transition:name={`box ${data?.id} image`}>
+			<div class="relative flex w-80 flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-personalizado">
 				<a  href={`/services/${data?.id}`} class="flex flex-col gap-1" class="relative mx-4 -mt-6 h-40 overflow-hidden rounded-xl bg-blue-gray-500 bg-clip-border text-white shadow-lg shadow-blue-gray-500/40 bg-gradient-to-r from-blue-500 to-bunker-900">
-					<img src={data?.img}  alt="carga seca" class="w-full h-full object-cover rounded-2xl hover:cursor-pointer" transition:name={`service ${data?.id} image`}>
+					<img src={data?.img}  alt="carga seca" class="w-full h-full object-cover rounded-t-2xl hover:cursor-pointer" transition:name={`service ${data?.id} image`}>
 				</a>
 				<div class="p-6">
 					<h5 class="mb-2 block font-sans text-xl font-semibold leading-snug tracking-normal text-blue-gray-900 antialiased">
@@ -48,7 +48,6 @@ const { data } = Astro.props;
 	
 
 <style>
-
 
 	li{
 		transition: 0.2s;
